@@ -1,0 +1,62 @@
+.filterTab {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .filterTab:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  }
+  
+  .filterTab h2 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    color: #333;
+  }
+  
+  .filterTab select,
+  .filterTab input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .filterTab select:focus,
+  .filterTab input[type="date"]:focus {
+    border-color: #3f51b5;
+    box-shadow: 0 0 0 2px rgba(63, 81, 181, 0.2);
+    outline: none;
+  }
+  
+  .filterTab button {
+    width: 100%;
+    padding: 12px;
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+  }
+  
+  .filterTab button:hover {
+    background-color: #303f9f;
+  }
+  
+  .filterTab button:active {
+    transform: scale(0.98);
+  }
+  
+  .filterTab button:disabled {
+    background-color: #bdbdbd;
+    cursor: not-allowed;
+  }

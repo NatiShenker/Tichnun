@@ -1,0 +1,15 @@
+/* src/componentsAfterSchool/StudentsTab/StudentsTab.module.css */
+.studentsTab {
+    padding: 24px;
+  }
+  
+  .studentsTab h2 {
+    color: #333;
+    margin-bottom: 24px;
+  }
+  
+  .studentGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 24px;
+  }

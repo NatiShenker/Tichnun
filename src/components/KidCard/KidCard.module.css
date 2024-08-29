@@ -1,0 +1,120 @@
+.kidCard {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .kidCard:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transform: translateY(-2px);
+  }
+  
+  .kidPicture {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+    transition: transform 0.3s ease;
+  }
+  
+  .kidCard:hover .kidPicture {
+    transform: scale(1.05);
+  }
+  
+  .kidCard h3 {
+    margin: 0 0 8px 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .kidId, .kidClass {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #757575;
+  }
+  
+  .activityInfo {
+    margin-top: 16px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .activityInfo.changing {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  
+  .activityInfo h4 {
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .activityInfo p {
+    margin: 4px 0;
+    font-size: 14px;
+    color: #757575;
+  }
+  
+  .activityButton {
+    width: 100%;
+    background-color: #3f51b5;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .activityButton::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+  }
+  
+  .activityButton:hover::after {
+    animation: ripple 1s ease-out;
+  }
+  
+  .activityButton:hover:not(:disabled) {
+    background-color: #303f9f;
+  }
+  
+  .activityButton:active:not(:disabled) {
+    transform: scale(0.98);
+  }
+  
+  .activityButton:disabled {
+    background-color: #bdbdbd;
+    cursor: not-allowed;
+  }
+  
+  @keyframes ripple {
+    0% {
+      transform: scale(0, 0);
+      opacity: 1;
+    }
+    20% {
+      transform: scale(25, 25);
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      transform: scale(40, 40);
+    }
+  }
